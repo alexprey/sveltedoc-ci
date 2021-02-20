@@ -1,0 +1,1 @@
+This is a repository with scripts required to make analytic and some other staff for [sveltedoc-parser](https://github.com/alexprey/sveltedoc-parser)

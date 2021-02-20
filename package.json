@@ -1,0 +1,21 @@
+{
+  "name": "parsers-performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "*"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "del yarn.lock && yarn install && node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "glob": "^7.1.6",
+    "request": "^2.88.2",
+    "sveltedoc-parser": "^4.0.0"
+  }
+}
