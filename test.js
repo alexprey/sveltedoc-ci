@@ -8,6 +8,8 @@ const GLOB_FILTER = 'files/**/*.svelte';
 
 const writeLog = console.log;
 
+const ICON_BASE_URL = 'https://github.com/alexprey/sveltedoc-ci/raw/master';
+
 const ARROW_DOWN = {
     green: '/assets/down-arrow--green.png',
     yellow: '/assets/down-arrow--yellow.png',
@@ -51,11 +53,11 @@ function renderStatsTable(artifacts) {
                 const color = isBetterDelta(delta) ? 'green' : 'red';
 
                 if (delta < 0.0) {
-                    return `${formatFn(value)} (![](${ARROW_DOWN[color]}) ${formatFn(delta)})`;
+                    return `${formatFn(value)} (![](${ICON_BASE_URL}${ARROW_DOWN[color]}) ${formatFn(delta)})`;
                 }
 
                 if (delta > 0.0) {
-                    return `${formatFn(value)} (![](${ARROW_UP[color]}) +${formatFn(delta)})`;
+                    return `${formatFn(value)} (![](${ICON_BASE_URL}${ARROW_UP[color]}) +${formatFn(delta)})`;
                 }
             }
         }
@@ -170,11 +172,11 @@ function handleTestStats(stats) {
                         });
 
                         if (!output) {
-                            writeLog(`Failed [${item.path}] with message: Empty output`);
+                            //writeLog(`Failed [${item.path}] with message: Empty output`);
                             handledWithError++;
                         }
                     } catch(e) {
-                        writeLog(`Failed [${item.path}] with message: (${e.name}) ${e.message}`);
+                        //writeLog(`Failed [${item.path}] with message: (${e.name}) ${e.message}`);
                         handledWithError++;
                     }
                 });

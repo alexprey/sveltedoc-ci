@@ -8,7 +8,8 @@
   },
   "type": "module",
   "scripts": {
-    "test": "del yarn.lock && yarn install && node test.js"
+    "test:latest": "yarn add --no-lockfile sveltedoc-parser@latest && node test.js",
+    "test:all": "node test-all.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,5 @@
     "cheerio": "^1.0.0-rc.5",
     "glob": "^7.1.6",
     "request": "^2.88.2",
-    "sveltedoc-parser": "^4.0.0"
   }
 }
