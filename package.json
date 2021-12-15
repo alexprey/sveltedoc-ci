@@ -9,6 +9,8 @@
   "type": "module",
   "scripts": {
     "test:latest": "yarn add --no-lockfile sveltedoc-parser@latest && node test.js",
+    "test:git": "yarn add --no-lockfile https://github.com/alexprey/sveltedoc-parser.git#master && node test.js",
+    "test:git:dev": "yarn add --no-lockfile https://github.com/alexprey/sveltedoc-parser.git#dev && node test.js",
     "test:all": "node test-all.js"
   },
   "author": "",
@@ -17,5 +19,6 @@
     "cheerio": "^1.0.0-rc.5",
     "glob": "^7.1.6",
     "request": "^2.88.2",
+    "sveltedoc-parser": "https://github.com/alexprey/sveltedoc-parser.git#dev"
   }
 }
