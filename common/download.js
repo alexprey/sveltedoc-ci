@@ -23,9 +23,7 @@ function parseSearchPageOutput(body) {
                 file: $link.text(),
                 uniqueFilePath: decodedHref,
                 href: 'https://github.com/' + decodedHref,
-                raw:
-                    'https://github.com/' +
-                    decodedHref.replace('/blob/', '/raw/'),
+                raw: 'https://github.com/' + decodedHref.replace('/blob/', '/raw/'),
             };
         });
 

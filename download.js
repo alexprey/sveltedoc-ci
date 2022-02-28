@@ -9,7 +9,7 @@ const searchTerms = [
 
 (async () => {
     const tasks = searchTerms.map(searchTerm => {
-        console.log(`Try to download for: ${searchTerms}`)
+        console.log(`Try to download for: ${searchTerm}`)
         return handleFullSearch(searchTerm);
     });
 
